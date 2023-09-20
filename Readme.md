@@ -8,8 +8,14 @@ This sample does not use the Smartsheet API.
 When building a Java application we need a Java Development Kit (JDK). We can use an 
 existing Docker image with a JDK in it to build our class.
 
+On linux use:
 ```
 docker run -it -v $(pwd):/build openjdk:8u131-jdk-alpine javac /build/HelloWorld.java
+```
+
+On GitBash (if your command prompt includes MINGW) use:
+```
+MSYS_NO_PATHCONV=1 docker run -it -v $(pwd):/buid openjdk:8u131-jdk-apline javac /build/HelloWorld.java
 ```
 
 ## Build Docker Container Image
